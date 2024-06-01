@@ -15,7 +15,7 @@
             color: #fff;
         }
         #logo {
-            width: 150px;
+            width: 300px;
             display: block;
             margin: 0 auto 20px;
         }
@@ -51,7 +51,7 @@
 </head>
 <body>
 
-    <img id="logo" src="zoro_logo.png" alt="Drapeau de Zoro">
+    <img id="logo" src="https://w7.pngwing.com/pngs/202/343/png-transparent-roronoa-zoro-monkey-d-luffy-trafalgar-d-water-law-one-piece-pirate-warriors-zoro-one-piece-text-logo-jolly-roger.png" alt="Drapeau de Zoro">
 
     <h1>Énigme de Zoro</h1>
 
