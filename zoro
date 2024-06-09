@@ -3,77 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Énigme de Zoro</title>
+    <title>Enigme de Zoro</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-image: url('fond.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-        }
-        #logo {
-            width: 300px;
-            display: block;
-            margin: 0 auto 20px;
-        }
-        h1 {
             text-align: center;
+            background: url('https://c.wallhere.com/photos/dd/29/1920x1080_px_bubbles_One_Piece_Roronoa_Zoro-587051.jpg!d') no-repeat center center fixed;
+            background-size: cover;
+            padding: 20px;
+            color: white;
         }
-        form {
-            max-width: 400px;
-            margin: 0 auto;
+        img {
+            width: 50%;
+            max-width: 600px;
+        }
+        .container {
             background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: inline-block;
         }
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        #resultat {
+        .message {
             margin-top: 20px;
-            text-align: center;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-
-    <img id="logo" src="https://w7.pngwing.com/pngs/202/343/png-transparent-roronoa-zoro-monkey-d-luffy-trafalgar-d-water-law-one-piece-pirate-warriors-zoro-one-piece-text-logo-jolly-roger.png" alt="Drapeau de Zoro">
-
-    <h1>Énigme de Zoro</h1>
-
-    <form id="zoroEnigmeForm" action="traitement.php" method="post">
-        <label for="reponse">Quel est le nom du maître d'armes de Zoro avant qu'il ne devienne un pirate ?</label>
-        <input type="text" id="reponse" name="reponse" placeholder="Votre réponse...">
-        <input type="submit" value="Vérifier">
-    </form>
-
-    <div id="resultat"></div>
+    <div class="container">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e00afa82-a0ea-4d03-82d7-2fb2b2cb6be0/d5wk1sz-b8d1f557-f8e3-42ac-acf4-1075cf06683b.png/v1/fill/w_1024,h_448/zoro_logo_one_piece_by_redribbon_leo_d5wk1sz-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDQ4IiwicGF0aCI6IlwvZlwvZTAwYWZhODItYTBlYS00ZDAzLTgyZDctMmZiMmIyY2I2YmUwXC9kNXdrMXN6LWI4ZDFmNTU3LWY4ZTMtNDJhYy1hY2Y0LTEwNzVjZjA2NjgzYi5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.p0CPreLf4TgXGP0JdtDd_99A2YJTKaX2J0dE4Xjo47A" alt="Zoro">
+        <p>En découvrant l'énigme de ZORO tu te rapproches un peu du fabuleux trésor qu'est le One piece ! Réussi à trouver la réponse à cette question et tu gagneras un indice qui t'aidera dans ta quête !</p>
+        <p>Quel est le nom du maître d’armes de Zoro avant qu’il ne devienne un pirate ?</p>
+        <input type="text" id="answer" placeholder="Écris ta réponse ici">
+        <button onclick="checkAnswer()">Valider</button>
+        <div id="message" class="message"></div>
+    </div>
 
     <script>
-        document.getElementById("zoroEnigmeForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Empêcher le rechargement de la page
-            var reponse = document.getElementById("reponse").value;
-            if (reponse.trim().toLowerCase() === "shimotsuki kôshirô") {
-                document.getElementById("resultat").innerHTML = "Bonne réponse ! La récompense est : 0";
-            } else {
-                document.getElementById("resultat").innerHTML = "Désolé, mauvaise réponse. Veuillez réessayer.";
-            }
-        });
-    </script>
+        function checkAnswer() {
+            var answer = document.getElementById('answer').value.trim().toLowerCase();
+            var messageElement = document.getElementById('message');
 
+            if (answer === "shimotsuki kōshirō" || answer === "shimotsuki kôshirô" || answer === "shimotsuki koushirou") {
+                messageElement.textContent = "Je reflechis encore au chiffre";
+                messageElement.style.color = "green";
+            } else {
+                messageElement.textContent = "Tu as perdu ton chemin. Essaie encore !";
+                messageElement.style.color = "red";
+            }
+        }
+    </script>
 </body>
 </html>
