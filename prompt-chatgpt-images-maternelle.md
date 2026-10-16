@@ -10,15 +10,16 @@ Tu vas créer les images à imprimer (les « supports ») des grands jeux matern
 
 Des animateurs de centres de loisirs, avec des enfants de 3 à 6 ans. Ils impriment la feuille en A4, la découpent et parfois la plastifient. Les enfants ne savent pas lire, donc l'image doit se comprendre sans texte.
 
-## Comment on travaille : une image à la fois
+## Comment on travaille : tu enchaînes tout seul
 
-1. Avant de commencer un jeu, lis ses règles dans Supabase (projet `hhqkyzpizssbeoxehurt`) pour vérifier les noms, les couleurs et les détails :
+Tu fais toute la liste d'un coup, image après image, **sans attendre ma réponse**. Ne me demande pas de valider : je regarderai tout à la fin et je te dirai ce qu'il faut refaire.
+
+Pour chaque jeu :
+1. Lis ses règles dans Supabase (projet `hhqkyzpizssbeoxehurt`) pour vérifier les noms, les couleurs et les détails :
    `select k.kit from public.activity_kits k join public.content_items c on c.id = k.activity_id where c.slug = '<slug>';`
-   Si les règles disent autre chose que ma liste, ce sont les règles qui ont raison. Dis-le-moi en une phrase.
-2. Crée **une seule image**, puis montre-la-moi et attends ma réponse :
-   - « ok » : tu la mets en ligne (étapes 3 et 4) et tu passes à la suivante ;
-   - « refais » ou une remarque : tu corriges et tu me la remontres.
-3. Mise en ligne : Supabase, Storage, bucket `activity-resources`, dossier `games/<slug>/`, avec le nom de fichier exact de la liste (format PNG, moins de 4 Mo). Si tu ne peux pas déposer le fichier toi-même, donne-le-moi en téléchargement et écris-moi le dossier exact où le glisser. Attends alors que je te dise « déposé ».
+   Si les règles disent autre chose que ma liste, ce sont les règles qui ont raison. Note-le pour le bilan.
+2. Crée les images du jeu une par une. Après chaque image, relis-la toi-même avant de passer à la suivante : bon personnage, bon nombre de cartes, pas de faute dans le texte, marges blanches, lisible en noir et blanc. Si quelque chose ne va pas, refais-la tout de suite, sans me demander.
+3. Mise en ligne : Supabase, Storage, bucket `activity-resources`, dossier `games/<slug>/`, avec le nom de fichier exact de la liste (PNG, moins de 4 Mo).
 4. Rattachement au jeu : lance ce SQL dans Supabase (remplace les valeurs). Il ne fait rien si le fichier n'est pas en ligne, et on peut le relancer sans risque :
    ```sql
    insert into public.activity_resources (activity_id, storage_path, title, page_count, description)
@@ -30,9 +31,15 @@ Des animateurs de centres de loisirs, avec des enfants de 3 à 6 ans. Ils imprim
      set title = excluded.title, page_count = excluded.page_count, description = excluded.description;
    ```
    Pense à doubler les apostrophes dans le SQL (`l''ourson`).
-5. Vérifie avec cette requête, puis donne-moi le résultat en une ligne :
+5. Vérifie avec cette requête :
    `select r.storage_path, r.title from public.activity_resources r join public.content_items c on c.id = r.activity_id where c.slug = '<slug>';`
-6. À la fin de chaque jeu, fais-moi un petit bilan : ce qui est en ligne et ce qui reste à faire.
+6. Écris une seule ligne de bilan (« Doudous : 2/2 en ligne ») et passe directement au jeu suivant.
+
+**Si tu ne peux pas déposer les fichiers toi-même dans Storage :** ne t'arrête pas. Continue toute la liste, puis donne-moi à la fin un seul fichier ZIP avec un dossier par jeu (`games/<slug>/…`), prêt à glisser dans le bucket, et le SQL complet de tous les rattachements à relancer une fois que j'ai déposé les fichiers.
+
+**Si tu es coupé** (limite de messages ou d'images) : reprends exactement là où tu t'es arrêté quand j'écris « continue », sans refaire ce qui est déjà en ligne.
+
+**À la toute fin**, donne-moi le bilan complet : la liste des images en ligne, celles qui manquent, et les endroits où les règles ne correspondaient pas à ma liste.
 
 **Si une planche ne tient pas sur une page** (par exemple 8 grandes cartes), fais une image par page. Quand toutes les pages sont validées, assemble-les dans un seul PDF A4, avec le même nom mais en `.pdf`, et mets le vrai nombre de pages dans le SQL.
 
@@ -182,4 +189,4 @@ Fais les planches dans cet ordre. Les ★ sont indispensables : fais-les toutes 
 
 ## Pour commencer
 
-Lance d'abord le SQL du ménage et donne-moi le résultat. Ensuite, lis les règles du Trésor des doudous perdus et montre-moi la première image : Pelote la brebis.
+Lance le SQL du ménage, puis commence par le Trésor des doudous perdus (Pelote la brebis) et enchaîne toute la liste jusqu'au bout sans t'arrêter.
