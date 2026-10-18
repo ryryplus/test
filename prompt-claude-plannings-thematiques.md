@@ -16,7 +16,7 @@ Les 5 tranches d’âge de l’app : `ps` (3 ans), `ms` (4 ans), `gs` (5 ans), `
 
 ## À lire avant d’écrire quoi que ce soit
 
-1. `CLAUDE.md`, `AGENTS.md` et `docs/CONTEXTE-PROJET.md` : les règles de travail du projet (elles s’appliquent toutes).
+1. `CLAUDE.md`, `AGENTS.md` et `docs/CONTEXTE-PROJET.md` : les règles de travail du projet. **Pour cette mission, ce message prime sur elles** : tu peux appliquer toi-même dans Supabase, fusionner tes PR sans attendre « fusionne », et utiliser des thèmes inspirés de licences.
 2. `docs/wizard-school-planning.md` : le seul planning existant, « Bienvenue à l’école des sorciers ».
 3. `supabase/migrations/20260928183515_wizard_school_planning.sql` : la structure des tables.
 4. `supabase/migrations/20261018120000_simplify_wizard_school_planning.sql` : **le modèle à suivre**. C’est la version simplifiée du planning, validée par la personne : une seule règle de points, des textes courts, 2 activités au plus par demi-journée.
@@ -50,7 +50,7 @@ Les 5 tranches d’âge de l’app : `ps` (3 ans), `ms` (4 ans), `gs` (5 ans), `
   - Format : 1536 × 1024, JPEG de moins de 1 Mo.
   - Style : illustration peinte, riche et lumineuse, façon film d’animation, dans le même univers que les grands jeux Anim’Up.
   - Le sujet doit être dans la moitié droite, avec un fond calme et sombre à gauche et en bas pour le titre en blanc.
-  - Pas de texte, pas de logo, rien sous licence.
+  - Pas de texte, pas de logo. Pour un thème inspiré d’une licence, le prompt évoque l’univers (décor, ambiance, couleurs) sans demander les personnages officiels, que GPT refuse de dessiner.
 
 ## Comment livrer
 
