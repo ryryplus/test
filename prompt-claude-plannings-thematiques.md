@@ -8,15 +8,17 @@ Tu travailles sur **Anim’Up**, une app Expo / React Native pour les animateurs
 
 ## Ta mission
 
-Créer de **nouveaux plannings thématiques de 5 jours**, **5 par tranche d’âge**, en suivant exactement la direction déjà prise sur le projet : **simple, court, et construit avec les jeux qui existent déjà**. Tu n’inventes pas de nouveaux jeux et tu ne compliques pas ceux qui existent.
+Créer de **nouveaux plannings thématiques de 5 jours**, **5 par tranche d’âge**, en suivant exactement la direction déjà prise sur le projet : **simple, court, et construit avec les jeux qui existent déjà**. Tu n’inventes pas de nouveaux jeux et tu ne compliques pas ceux qui existent. **Surtout, ne complexifie rien** : ni les plannings, ni les jeux, ni l’app.
 
 Les 5 tranches d’âge de l’app : `ps` (3 ans), `ms` (4 ans), `gs` (5 ans), `6-7`, `8-12`. Au total : 25 plannings. Travaille tranche par tranche, une PR par tranche (5 plannings), et **enchaîne les 5 tranches sans attendre de validation** entre deux.
 
 **Commence par regarder ce qui se fait sur Internet** : les thèmes de semaines et de séjours les plus utilisés en centres de loisirs et en colonies, par tranche d’âge. Cherche dans les sites d’animateurs, les plannings d’accueils de loisirs publiés par les mairies, les blogs d’animation, etc. Choisis les thèmes qui plaisent le plus aux enfants et aux animateurs.
 
+**Prévois aussi des thèmes de saison et de vacances** : Noël, Halloween, Pâques, Carnaval, l’hiver, l’été, la rentrée… Dans chaque tranche d’âge, mélange des thèmes de vacances et des thèmes « toute l’année ».
+
 ## À lire avant d’écrire quoi que ce soit
 
-1. `CLAUDE.md`, `AGENTS.md` et `docs/CONTEXTE-PROJET.md` : les règles de travail du projet. **Pour cette mission, ce message prime sur elles** : tu peux appliquer toi-même dans Supabase, fusionner tes PR sans attendre « fusionne », et utiliser des thèmes inspirés de licences.
+1. `CLAUDE.md`, `AGENTS.md` et `docs/CONTEXTE-PROJET.md` : les règles de travail du projet. **Pour cette mission, ce message prime sur elles** : tu peux appliquer toi-même dans Supabase et fusionner tes PR sans attendre « fusionne ». Les thèmes inspirés de licences sont autorisés.
 2. `docs/wizard-school-planning.md` : le seul planning existant, « Bienvenue à l’école des sorciers ».
 3. `supabase/migrations/20260928183515_wizard_school_planning.sql` : la structure des tables.
 4. `supabase/migrations/20261018120000_simplify_wizard_school_planning.sql` : **le modèle à suivre**. C’est la version simplifiée du planning, validée par la personne : une seule règle de points, des textes courts, 2 activités au plus par demi-journée.
@@ -35,7 +37,8 @@ Les 5 tranches d’âge de l’app : `ps` (3 ans), `ms` (4 ans), `gs` (5 ans), `
   - chaque `context` fait 1 à 2 phrases.
 - Les âges, durées et effectifs doivent être réalistes. En maternelle, prévois 25 à 45 minutes par activité, un seul groupe et rien à lire.
 - **Thèmes variés et populaires** : pirates, cirque, espace, jungle, chevaliers, détectives, fête foraine, océan… Les **thèmes inspirés de licences connues des enfants sont autorisés et même bienvenus** (films, dessins animés, jeux vidéo à la mode), s’ils sont populaires dans les centres. Ne refais pas un thème « école de magie », il existe déjà.
-- Tu ne crées **aucun nouveau jeu**. S’il manque vraiment une fiche pour un planning, signale-le à la personne au lieu de l’écrire.
+- Tu ne crées **aucun nouveau jeu**.
+- **Exception : les activités manuelles.** Tu peux créer des fiches d’activités manuelles qui n’existent pas encore (une couronne de Noël, une citrouille en papier, un masque de carnaval…). Mais **renseigne-toi sur Internet avant** : des bricolages vraiment faits en centre, avec du matériel courant et peu cher, et réalisables par l’âge visé. Pas de bricolage inventé au hasard. Elles suivent exactement le format des fiches existantes (8 sections, voir `supabase/migrations/20260928114830_add_first_ten_craft_activities.sql`), et leur illustration est faite par GPT dans le même style que les autres activités manuelles.
 
 **Les points et les maisons**
 - Les maisons et les points existent dans le planning des sorciers **parce que le thème s’y prête** (les maisons d’une école de magie). **Ce n’est pas obligatoire.** Mets des équipes et des points seulement si le thème en a besoin (une compétition, un tournoi, des clans…). Sinon, pas de maisons ni de points.
@@ -60,7 +63,7 @@ Les 5 tranches d’âge de l’app : `ps` (3 ans), `ms` (4 ans), `gs` (5 ans), `
 - Tu ne modifies jamais le planning des sorciers ni les fiches du catalogue. Les plannings sont publiés (`published = true`).
 - **Une PR par tranche**, que tu peux fusionner toi-même quand `npm run check` passe et que les données sont bien en base. Vérifie avec des requêtes de lecture et dis honnêtement ce que tu n’as pas pu vérifier.
 - **Le seul travail que tu ne fais pas, ce sont les illustrations : c’est GPT qui les fait.** À la fin, donne à la personne deux choses :
-  1. **un seul message prêt à coller à GPT**, qui lui demande de créer et déposer les couvertures de tous les plannings (`activity-illustrations/plannings/<slug>.jpg`, avec un prompt détaillé par planning), puis de renvoyer une requête de vérification ;
+  1. **un seul message prêt à coller à GPT**, qui lui demande de créer et déposer les couvertures de tous les plannings (`activity-illustrations/plannings/<slug>.jpg`) et les illustrations des nouvelles activités manuelles, avec un prompt détaillé pour chaque image, puis de rattacher les images et de renvoyer une requête de vérification ;
   2. **un résumé en français simple** : par tranche d’âge, les 5 thèmes et, pour chacun, ce qu’on fait chaque jour, en une ligne.
 
 ## Le but
