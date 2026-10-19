@@ -24,6 +24,7 @@ Chaque agent relit **toutes** les fiches de sa catégorie, sans échantillonner.
 - Tu **clarifies**, tu ne changes pas les jeux : on garde les mêmes règles, la même mécanique et le même matériel. On n'ajoute ni variante, ni système de points, ni rôle, ni étape.
 - Une correction rend une fiche **plus courte ou plus claire**, jamais plus longue sans raison.
 - **Style :** tutoiement de l'animateur, phrases courtes et naturelles, une idée par phrase, pas de jargon.
+- **Pas de mesures en mètres.** Un animateur ne mesure pas son terrain. Au lieu de « un terrain de 50 m », écris un lieu qu'il connaît : la cour de récréation, un grand couloir, le gymnase, une salle vidée de ses tables, la moitié d'un terrain de foot, un coin du parc. Pour une distance courte, écris « à 5 grands pas » ou « au bout de la salle ». Remplace les mesures déjà présentes dans les fiches que tu relis.
 - En cas de doute, tu ne modifies pas : tu notes le point dans le rapport, pour que la personne décide.
 
 ## À lire avant de commencer
@@ -39,7 +40,7 @@ Chaque agent relit **toutes** les fiches de sa catégorie, sans échantillonner.
 ## Ce que vérifie chaque agent
 
 **1. Grands jeux** : la partie **« Avant de jouer »** des règles, en priorité. Elle est souvent floue. Un débutant doit savoir, sans rien deviner :
-- **le terrain** : sa taille, ses limites et où se trouvent les camps, la prison, les postes ou les cachettes ;
+- **le terrain** : un lieu connu (la cour, le gymnase, un grand couloir…), pas une taille en mètres ; ses limites (un mur, une ligne de plots, la haie) ; et où se trouvent les camps, la prison, les postes ou les cachettes ;
 - **le matériel**, avec les quantités exactes : combien de foulards, de cartes, de plots… ;
 - **les équipes** : combien, de combien d'enfants, et comment on les forme ;
 - **le rôle de chaque animateur** : une ligne chacun, « Animateur 1 : … », « Animateur 2 : … » ;
@@ -64,7 +65,7 @@ Les grands jeux se modifient dans `content/grand-games/<slug>.game.json`. Valide
 
 **3. Jeux sportifs**
 - Le jeu **n'a-t-il pas été trop complexifié** ? Il doit rester simple pour un débutant, proche de la version que tout le monde connaît. Si une fiche a ajouté des règles, des rôles ou des points inutiles, reviens à la version simple et note-le dans le rapport.
-- Le terrain, les limites et le matériel (plots, ballons, chasubles) sont-ils clairs ?
+- Le terrain (un lieu connu comme la cour ou le gymnase, pas des mètres), les limites et le matériel (plots, ballons, chasubles) sont-ils clairs ?
 - La **sécurité** est-elle claire, sans en faire trop : surface, distances, contacts interdits, hydratation ?
 - La durée et l'âge sont-ils réalistes ?
 - La fiche explique-t-elle comment **éviter qu'un enfant attende sur le banc** (pas d'élimination longue) ?
