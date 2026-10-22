@@ -1,0 +1,39 @@
+Anim'Up — pub v5 « Tout au même endroit » — repères pour CapCut
+Tempo : 110 BPM (1 temps = 0,545 s). Durée : 33,82 s. Tous les changements de plan tombent sur un temps.
+
+00:00.48  pop léger                objets qui tombent (aussi à 0,66 · 0,90 · 1,08 · 1,22 · 1,40 · 1,60 · 1,75 · 1,95 + 0,36 s)
+00:01.38  whoosh court             texte « c'était chercher partout. »
+00:02.73  respiration              calme : le téléphone monte du bas
+00:03.02  whoosh aspiré (long)     tout le chaos est aspiré dans l'écran
+00:03.55  éclat / shimmer          flash dans l'écran
+00:03.84  silence puis pop         le logo se pose
+00:03.98  boing                    le « Up » jaune rebondit
+00:05.23  whoosh                   le téléphone pivote → 60 grands jeux
+00:05.51  pop                      l'autocollant jaillit (60 grands jeux)
+00:06.87  whoosh                   le téléphone pivote → 148 jeux sportifs
+00:07.15  pop                      l'autocollant jaillit (148 jeux sportifs)
+00:08.51  whoosh                   le téléphone pivote → 103 petits jeux
+00:08.79  pop                      l'autocollant jaillit (103 petits jeux)
+00:10.14  whoosh                   le téléphone pivote → 25 activités manuelles
+00:10.42  pop                      l'autocollant jaillit (25 activités manuelles)
+00:11.78  whoosh                   le téléphone pivote → 125 supports à imprimer (bruit d'imprimante)
+00:12.06  pop                      l'autocollant jaillit (125 supports à imprimer (bruit d'imprimante))
+00:13.42  whoosh                   le téléphone pivote → 60 chants (notes)
+00:13.70  pop                      l'autocollant jaillit (60 chants (notes))
+00:15.05  whoosh                   le téléphone pivote → 26 plannings à thème
+00:15.33  pop                      l'autocollant jaillit (26 plannings à thème)
+00:16.69  whoosh                   le téléphone pivote → Trouve-moi une activité (cartes mélangées)
+00:16.97  pop                      l'autocollant jaillit (Trouve-moi une activité (cartes mélangées))
+00:18.33  whoosh                   le téléphone pivote → Et même ta formation BAFA
+00:18.61  pop                      l'autocollant jaillit (Et même ta formation BAFA)
+00:19.76  whoosh montant           le téléphone grossit jusqu'à remplir l'écran
+00:20.18  musique plus douce       séquence émotion : « Toi, tu animes. »
+00:22.26  —                        « Eux, ils s'en souviendront. »
+00:24.20  whoosh                   rideau bleu nuit
+00:26.40  whoosh qui se resserre   les six écrans fusionnent en un seul téléphone
+00:28.36  silence                  respiration avant le final
+00:28.71  impact grave             logo Anim'Up
+00:28.88  boing                    le « Up » rebondit
+00:30.31  DING                     badge « BIENTÔT DISPONIBLE »
+00:30.81  scintillement            éclat de lumière sur le badge
+00:33.82  fin                      fin de la vidéo
